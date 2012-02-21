@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, SampleCSipSimpleAppActivity!</string>
-    <string name="app_name">SampleCSipSimpleApp</string>
+    <string name="sample_app_name">SampleCSipSimpleApp</string>
+    <string name="start_sip_service">Start SIP service</string>
+    <string name="manage_sip_service">Manage SIP service</string>
+    <string name="configure_sip_account">Configure SIP account</string>
+    <string name="sample_field_user">user@domain.com</string>
+    <string name="sample_field_password">password</string>
+    <string name="save_account">Save Account</string>
 
 </resources>
