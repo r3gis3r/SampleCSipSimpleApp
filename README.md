@@ -36,12 +36,10 @@ In this case you have to :
 * Checkout CSipSimple api part (this is a package that is standalone and integrated in CSipSimple source code).
 To do so 
 
-{{{
-cd SampleCSipSimpleApp/src/
-mkdir -p com/csipsimple
-cd com/csipsimple
-svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/src/com/csipsimple/api api
-}}}
+    cd SampleCSipSimpleApp/src/
+    mkdir -p com/csipsimple
+    cd com/csipsimple
+    svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/src/com/csipsimple/api api
 
 * Remove the reference to the CSipSimple library in eclipse settings of the project
 * Delete the AndroidManifest.xml file and rename AndroidManifestPlugin.xml file to AndroidManifest.xml.
