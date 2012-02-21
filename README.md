@@ -42,6 +42,7 @@ To do so :
     svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/src/com/csipsimple/api api
 
 Then you have to change manifest to be in plugin mode. So no need to redefine all entry points of CSipSimple because all are already defined in CSipSimple app part.
+
 * Remove the reference to the CSipSimple library in eclipse settings of the project
 * Delete the `AndroidManifest.xml` file and rename `AndroidManifestPlugin.xml` file to `AndroidManifest.xml`.
 
