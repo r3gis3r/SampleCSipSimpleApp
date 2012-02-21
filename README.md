@@ -6,7 +6,6 @@ This project aim to show very basic way to include or integrate CSipSimple in an
 Before doing everything, please read with a lot of attention :
 [Licensing information](http://code.google.com/p/csipsimple/wiki/Licensing?wl=en)
 
-
 As you will notice there is several ways to integrate with CSipSimple. Depending on the way you choose you will have to adapt manifest and included libs.
 
 The standalone way
@@ -34,14 +33,15 @@ In this case the repackaged CSipSimple (or CSipSimple itself) remains under GPL 
 
 * Checkout this project.
 * Checkout CSipSimple api part (this is a package that is standalone and integrated in CSipSimple source code).
+
 To do so :
-```
+
     cd SampleCSipSimpleApp/src/
     mkdir -p com/csipsimple
     cd com/csipsimple
     svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/src/com/csipsimple/api api
-    ```
 
+Then you have to change manifest to be in plugin mode. So no need to redefine all entry points of CSipSimple because all are already defined in CSipSimple app part.
 * Remove the reference to the CSipSimple library in eclipse settings of the project
 * Delete the `AndroidManifest.xml` file and rename `AndroidManifestPlugin.xml` file to `AndroidManifest.xml`.
 
