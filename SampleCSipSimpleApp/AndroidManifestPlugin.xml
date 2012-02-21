@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sample.csipsimple"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.CONFIGURE_SIP" />
+
+    <permission
+        android:name="android.permission.USE_SIP"
+        android:description="@string/permdesc_useSip"
+        android:label="@string/permlab_useSip"
+        android:permissionGroup="android.permission-group.COST_MONEY"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="android.permission.CONFIGURE_SIP"
+        android:description="@string/permdesc_configureSip"
+        android:label="@string/permlab_configureSip"
+        android:permissionGroup="android.permission-group.COST_MONEY"
+        android:protectionLevel="dangerous" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/sample_app_name" >
+        <activity
+            android:name=".SampleCSipSimpleAppActivity"
+            android:label="@string/sample_app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
