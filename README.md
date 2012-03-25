@@ -33,6 +33,7 @@ In this case the repackaged CSipSimple (or CSipSimple itself) remains under GPL 
 
 * Checkout this project.
 * Checkout CSipSimple api part (this is a package that is standalone and integrated in CSipSimple source code).
+* Checkout CSipSimple strings api part (this is a folder containing useful string).
 
 To do so :
 
@@ -40,6 +41,10 @@ To do so :
     mkdir -p com/csipsimple
     cd com/csipsimple
     svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/src/com/csipsimple/api api
+    cd ../../..
+    mkdir -p res/values
+    cd res/values
+    svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/res/values/api_strings.xml api_strings.xml
 
 Then you have to change manifest to be in plugin mode. So no need to redefine all entry points of CSipSimple because all are already defined in CSipSimple app part.
 
