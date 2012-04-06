@@ -44,7 +44,7 @@ To do so :
     cd ../../..
     mkdir -p res/values
     cd res/values
-    svn checkout http://csipsimple.googlecode.com/svn/trunk/CSipSimple/res/values/api_strings.xml api_strings.xml
+    svn export http://csipsimple.googlecode.com/svn/trunk/CSipSimple/res/values/api_strings.xml api_strings.xml
 
 Then you have to change manifest to be in plugin mode. So no need to redefine all entry points of CSipSimple because all are already defined in CSipSimple app part.
 
