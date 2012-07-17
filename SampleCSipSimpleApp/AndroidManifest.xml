@@ -63,7 +63,7 @@
 
         <!-- To be able to do video, this has to be launched in sipStack process -->
         <activity
-            android:name="com.csipsimple.ui.InCallActivity2"
+            android:name="com.csipsimple.ui.incall.InCallActivity"
             android:allowTaskReparenting="true"
             android:configChanges="orientation"
             android:excludeFromRecents="true"
