@@ -38,9 +38,6 @@ public class PopupMainActivity extends Activity implements OnClickListener, OnIn
 
     protected static final String THIS_FILE = "PopupMainActivity";
 
-
-    private SipCallSession initialSession;
-
     private TextToSpeech tts;
 
     @Override
@@ -54,8 +51,6 @@ public class PopupMainActivity extends Activity implements OnClickListener, OnIn
 //        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
 //        getWindow().setAttributes(lp);
         
-        initialSession = getIntent().getParcelableExtra(SipManager.EXTRA_CALL_INFO);
-
         cacheDir = getExternalCacheDir();
         if(cacheDir != null) {
             Log.d(THIS_FILE, "Cache dir is : " + cacheDir.toString());
@@ -270,16 +265,12 @@ public class PopupMainActivity extends Activity implements OnClickListener, OnIn
             return;
         }
 
+        // Play on all active calls.
         int callId = SipCallSession.INVALID_CALL_ID;
-        if (initialSession != null) {
-            Log.d(THIS_FILE, "Use initial session as available");
-            callId = initialSession.getCallId();
-        } else {
-            for (SipCallSession call : callsInfo) {
-                if (call.isActive()) {
-                    callId = call.getCallId();
-                    break;
-                }
+        for (SipCallSession call : callsInfo) {
+            if (call.isActive()) {
+                callId = call.getCallId();
+                break;
             }
         }
         if (callId == SipCallSession.INVALID_CALL_ID) {
