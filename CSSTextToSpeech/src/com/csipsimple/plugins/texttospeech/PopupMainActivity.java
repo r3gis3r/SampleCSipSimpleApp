@@ -16,7 +16,6 @@ import android.speech.tts.TextToSpeech.OnInitListener;
 import android.speech.tts.TextToSpeech.OnUtteranceCompletedListener;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -83,13 +82,6 @@ public class PopupMainActivity extends Activity implements OnClickListener, OnIn
         tts.shutdown();
         
         clearCache();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.popup_main, menu);
-        return true;
     }
 
     private SipCallSession[] callsInfo;
