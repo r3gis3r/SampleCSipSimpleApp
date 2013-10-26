@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.csipsimple.plugins.texttospeech"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.CONFIGURE_SIP" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        <activity
+            android:name=".PopupMainActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="com.csipsimple.sipcall.MIN_STATE"
+                android:value="3" />
+            <meta-data
+                android:name="com.csipsimple.sipcall.MAX_STATE"
+                android:value="5" />
+            <meta-data
+                android:name="com.csipsimple.sipcall.CALL_WAY"
+                android:value="3" />
+
+            <intent-filter>
+                <action android:name="com.csipsimple.sipcall.action.HANDLE_CALL_PLUGIN" />
+
+                <category android:name="android.intent.category.EMBED" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

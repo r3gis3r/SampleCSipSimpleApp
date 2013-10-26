@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">SIP TextToSpeech</string>
+    <string name="menu_settings">Settings</string>
+    <string name="text_to_say">Text to say</string>
+    <string name="send">Send</string>
+</resources>
